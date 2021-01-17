@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.min.css" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
     <title>Beats Solo 3</title>
   </head>
   <body>
    <div class="wrapper">
      <div class="wrapper-content">
-       <section  class="section first is-active hero">
+       <section  class="section hero first is-active">
          <div class="container hero-container">
           <header class="header">
             <a href="#" class="logo">
@@ -967,31 +968,31 @@
           </ul>
         </div>
        </section>
-       <section class="section section__video">
-        <div class="container">
-          <h2 class="section__title">How we are working</h2>
-          <div class="player-section__container">
-            <div class="player">
-              <div class="player__wrapper">
-                <div id="yt-player" class="player__elem"></div>
-                <div class="player__splash"></div>
+        <section class="section how">
+          <div class="container">
+            <h2 class="title">Как мы работаем</h2>
+            <div class="video__container">
+              <div class="video__player">
+                <video id="video" poster="./images/video-background.png">
+                  <source src="./images/video.mp4" type="video/mp4">
+                </video>
+                <img src="./images/Play_white.png" alt="Icon" class="play video__play">
               </div>
-              <div class="player__controls">
-                <button class="player__start">
-                  <!-- <img src="./images/Play-video.png" alt="player" class="player__start-btn"> -->
-                </button>
-                <div class="player__playback">
-                  <button class="player__playback-button"></button>
+              <div class="video__toolbar">
+                <div class="duration">
+                  <img src="./images/play.png" alt="Icon" class="duration__icon play">
+                  <input type="range" class="duration__length" id="durationLevel" min="0">
                 </div>
-                <div class="player__duration">
-                  <span class="player__duration-completed">0:00</span>
-                  <span class="player__duration-estimate">0:00</span>
+                <div class="sound">
+                  <img src="./images/sound-icon.png" alt="Icon" class="sound__img" id="micLevel">
+                  <div class="sound__volume">
+                    <input type="range" class="duration__length duration__length--other" id="volumeLevel" min="0" max="10">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-       </section>
+        </section>
        <section class="section order-section section--font--color--green">
         <div class="container">
           <h2 class="section__title">Order delivery</h2>

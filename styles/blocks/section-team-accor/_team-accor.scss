@@ -1,0 +1,143 @@
+.team-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:after,
+  ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: center center / contain no-repeat;
+    z-index: 1;
+  }
+
+  &::after {
+    top: -2.875rem;
+    right: 2.125rem;
+    background-image: url("../images/square.png");
+    width: 4.5rem;
+    height: 5.125rem;
+  }
+}
+
+.section-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5.6rem;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    padding: 0 10%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -1.25rem;
+  }
+}
+
+.team--version--desktop {
+  .team__content {
+    position: absolute;
+    top: 100%;
+  }
+  @include tablets {
+    display: none;
+  }
+}
+
+.team--version--mobile {
+  display: none;
+
+  .team__item {
+    margin-bottom: 1rem;
+  }
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.team__item {
+  max-width: 21.9rem;
+  flex: 1;
+  text-align: center;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    flex: initial;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 1.25rem;
+  }
+}
+
+.team__member {
+  margin-bottom: 2rem;
+}
+
+.team__member-img {
+  object-fit: cover;
+}
+
+.team__title {
+  padding: 0 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    border-top: 6px solid #e01f3d;
+    border-bottom: 0;
+    display: block;
+    margin-left: 0.5rem;
+  }
+}
+
+.active .team__title::after {
+  content: "";
+  transform: rotate(180deg);
+  transition: 0.4s ease-in-out;
+}
+
+.team__content {
+  transition: height 0.3s;
+  overflow: hidden;
+  height: 0;
+}
+
+.team__content-block {
+  padding-bottom: 0.5rem;
+}
+
+.team__content-subtitle {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.team__content-info {
+  color: #666666;
+  font-size: 1.8rem;
+  opacity: 0.9;
+}

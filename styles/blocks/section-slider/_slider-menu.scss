@@ -1,0 +1,70 @@
+.slider-menu {
+  display: flex;
+  padding: 2.8rem;
+  background-color: #6e6e6e;
+  position: relative;
+  border-radius: 7px;
+  margin-bottom: 3.7rem;
+  cursor: pointer;
+
+  @include tablets {
+    display: none;
+  }
+
+  &__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: #ffffff;
+  }
+
+  &__hover {
+    display: none;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 27rem;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+  }
+
+  &:hover .slider-menu__hover {
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem 2.6rem 2rem;
+    color: #000000;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+      background: rgba(47, 79, 79, 0.7);
+    }
+  }
+
+  &__pic {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

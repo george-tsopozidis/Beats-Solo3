@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4.2rem;
+}
+
+.logo-icon {
+  width: 4.2rem;
+  height: 4.2rem;
+  fill: #e01f3d;
+}
+
+.menu {
+  @include tablets {
+    display: none;
+  }
+
+  .menu-link {
+    white-space: nowrap;
+  }
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  margin-right: 2.8rem;
+  transition: 0.3s linear;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: #e01f3d;
+    text-decoration: underline;
+  }
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  transition: 0.3s linear;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &__icon {
+    margin-right: 0.4rem;
+  }
+
+  &__svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: 0.1s linear;
+
+    &:hover {
+      fill: #e01f3d;
+    }
+  }
+}
+
+.header__phone-number {
+  @include tablets {
+    display: none;
+  }
+}

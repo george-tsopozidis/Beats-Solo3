@@ -1,0 +1,30 @@
+.hero-icons__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-icons__item {
+  display: flex;
+  margin-right: 1.5rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.hero-icons__svg {
+  width: 4.4rem;
+  height: 4.4rem;
+  margin-right: 0.8rem;
+}
+
+.hero-icons__text {
+  text-align: left;
+  max-width: 10.3rem;
+}
+
+.hero-icons {
+  @include tablets {
+    display: none;
+  }
+}

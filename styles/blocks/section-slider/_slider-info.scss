@@ -1,0 +1,71 @@
+.slider-info {
+  width: 82%;
+
+  @include tablets {
+    width: 74%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__desc {
+    text-align: left;
+    color: #666666;
+    margin-bottom: 4.5rem;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__differ {
+    display: flex;
+    margin-bottom: 4.9rem;
+  }
+
+  &__charging {
+    display: flex;
+    flex-direction: column;
+    color: #666666;
+    margin-right: 9.6rem;
+
+    &:first-child {
+      @include phones {
+        margin-left: 9rem;
+      }
+    }
+  }
+
+  &__span {
+    width: 8rem;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  &__order {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__price {
+    color: #0d0d0d;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    margin-right: 2.5rem;
+
+    @include tablets {
+      margin-right: 10rem;
+    }
+
+    @include phones {
+      margin-right: 2.6rem;
+      font-size: 3rem;
+    }
+  }
+
+  &__btn {
+    @include phones {
+      padding: 1.5rem 2.5rem;
+    }
+  }
+}

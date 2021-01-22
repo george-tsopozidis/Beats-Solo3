@@ -1,0 +1,26 @@
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+// media import
+@import "./layout/_media.scss";
+
+// rest imports
+@import "./layout/_fonts.scss";
+@import "./layout/_reset.scss";
+@import "./blocks/section-hero/_hero.scss";
+@import "./blocks/section-hero/_header.scss";
+@import "./blocks/section-hero/_hero-content.scss";
+@import "./blocks/section-hero/_hero-icons.scss";
+@import "./blocks/section-benefits/_benefits.scss";
+@import "./blocks/section-slider/_slider.scss";
+@import "./blocks/section-slider/slider-menu";
+@import "./blocks/section-slider/slider-info";
+@import "./blocks/section-team-accor/_team-accor.scss";
+@import "./blocks/section-color-accor/_color-accor.scss";
+@import "./blocks/section-reviews/_reviews.scss";
+@import "./blocks/section-video/_video.scss";
+@import "./blocks/section-form/_form.scss";
+@import "./blocks/section-map/_section-map.scss";
+@import "./blocks/section-burger/_burger.scss";
+@import "./blocks/section-ops/_ops.scss";
